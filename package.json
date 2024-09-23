@@ -80,9 +80,5 @@
         "prettier": "^3.3.3",
         "tailwindcss": "^3.4.1",
         "typescript": "^5"
-    },
-    "engines": {
-        "node": ">=18.0.0"
-    },
-    "engineStrict": true
+    }
 }
