@@ -2,7 +2,8 @@ import React from "react"
 
 type Props = { children: React.ReactNode }
 
-const AuthLayout = ({ children }: Props) => {
+const AuthLayout = async ({ children }: Props) => {
+    const use = await onAuthenticatedUser()
     return <div>AuthLayout</div>
 }
 
