@@ -20,8 +20,19 @@ export const onAuthenticatedUser = async () => {
                 lastname: true,
             },
         })
+        if (user)
+            return {
+                status: 200,
+                id: user.id,
+                image: clerk.imageUrl,
+                username: `${user.firstname} ${user.lastname}`,
+            }
+        return {
+            status: 404,
+        }
     } catch (error) {
-        console.error(error)
-        return null
+        return {
+            status: 400,
+        }
     }
 }
